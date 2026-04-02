@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1 class="app-title">to do</h1>
+
+    <div class="todo-card">
+      <!-- Input -->
+      <div class="input-section">
+        <button id="toggle-all" class="toggle-all" title="전체 토글">&#10095;</button>
+        <input
+          id="new-time"
+          class="time-picker"
+          type="time"
+          aria-label="시간 선택"
+        />
+        <input
+          id="new-todo"
+          class="new-todo"
+          type="text"
+          placeholder="할 일을 입력하세요..."
+          autocomplete="off"
+          autofocus
+        />
+      </div>
+
+      <!-- List -->
+      <ul id="todo-list" class="todo-list"></ul>
+
+      <!-- Footer -->
+      <footer id="footer" class="footer">
+        <span id="item-count" class="item-count"></span>
+        <div class="filters" role="group" aria-label="필터">
+          <button class="filter-btn active" data-filter="all">전체</button>
+          <button class="filter-btn" data-filter="active">진행중</button>
+          <button class="filter-btn" data-filter="completed">완료</button>
+        </div>
+        <button id="clear-completed" class="clear-btn">완료 삭제</button>
+      </footer>
+    </div>
+
+    <p class="info">더블클릭으로 수정 &nbsp;·&nbsp; Enter 확인 &nbsp;·&nbsp; Esc 취소</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
